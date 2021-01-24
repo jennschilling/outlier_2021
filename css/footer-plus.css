@@ -1,0 +1,45 @@
+/*From: https://github.com/juliasilge/deming2018/blob/master/css/footer_plus.css */
+
+.title-slide {
+  background-image: url(img/Colorful-Plants.jpg);
+  background-size: cover;
+}
+
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.large { 
+  font-size: 160%;
+  color: #FFFFFF;
+}
+
+.titlelinks{
+  font-size: 130%;
+  color: #FFFFFF; 
+}
+
+.inverse a:link{
+  color: #30b4a7;
+}
+
+
+.remark-slide-number {
+  display: none;
+}
+
+div.my-footer {
+    background-color: #30b4a7;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 25px;
+    width: 100%;
+}
+div.my-footer span {
+    font-size: 14pt;
+    color: #FFFFFF;
+    position: absolute;
+    right: 15px;
+    bottom: 2px;
+}

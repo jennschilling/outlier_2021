@@ -1,0 +1,134 @@
+---
+title: "Dashboard Accessiblity: Focus Order"
+subtitle: "Outlier Lightning Talk"
+author: "Jenn Schilling"
+date: "February 2021"
+output:
+  xaringan::moon_reader:
+    css: ["css/xaringan-themer.css", "css/footer-plus.css"]
+    nature:
+      ratio: '16:9'
+      img_dir: img
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+---
+
+
+```{r setup, include=FALSE}
+
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.retina = 3, warning = FALSE, message = FALSE)
+
+library(here)
+library(tidyverse)
+library(xaringanthemer)
+library(icon)
+
+ 
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+
+style_duo_accent(
+  primary_color = "#30b4a7",
+  secondary_color = "#9f5f9c",
+  link_color = choose_dark_or_light("#FFFFFF", "#30b4a7"),
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono"),
+  inverse_background_color = "#9f5f9c",
+  inverse_header_color = "#FFFFFF",
+  inverse_text_color = "#FFFFFF"
+)
+
+```
+
+layout: true
+
+<div class="my-footer"><span>`r icon::fontawesome$brands$twitter` datasciencejenn</span></div>
+
+---
+
+class: inverse, left, middle
+
+background-image: url(img/Blue-Wire.jpg)
+background-size: cover
+
+# Dashboard Accessiblity: Focus Order
+
+.large[Jenn Schilling]
+
+.large[Outlier | February 2021]
+
+.titlelinks[
+<br>`r icon::fontawesome$solid$link` [jennschilling.me](https://jennschilling.me)
+<br>`r icon::fontawesome$brands$twitter` [datasciencejenn](https://twitter.com/datasciencejenn)
+]
+
+???
+
+I'm Jenn Schilling, and today I'm going to talk about how to set the focus order on a Tableau dashboard
+
+---
+
+
+# The Problem
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-title.png")
+```
+]
+
+---
+
+# The Problem
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-past-10.png")
+```
+]
+
+
+---
+
+# The Problem
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-date.png")
+```
+]
+
+---
+
+# The Problem
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-blue.png")
+```
+]
+
+
+---
+
+# The Problem
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-most-recent.png")
+```
+]
+
+
+---
+
+
+
+
+
+
