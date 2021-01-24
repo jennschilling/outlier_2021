@@ -69,7 +69,7 @@ background-size: cover
 
 ???
 
-I'm Jenn Schilling, and today I'm going to talk about how to set the focus order on a Tableau dashboard
+I'm Jenn Schilling, and today I'm going to talk about how to set the focus order on a Tableau dashboard. When I made the COVID-19 Dashboard for the University of Arizona, where I work as a Senior Data Analyst, the focus order became an issue immediately after the dashboard went live. I am going to share why focus order matters, how it can be set within Tableau, and the implications to data visualization as a whole.
 
 ---
 
@@ -81,6 +81,10 @@ I'm Jenn Schilling, and today I'm going to talk about how to set the focus order
 knitr::include_graphics("img/dashboard-title.png")
 ```
 ]
+
+???
+
+The problem 
 
 ---
 
