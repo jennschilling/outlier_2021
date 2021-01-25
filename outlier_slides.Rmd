@@ -149,6 +149,15 @@ The dashboard is built in Tableau, and in Tableau, the tab or focus order is bas
 
 ???
 
+
+1. Save workbook as a `.tbw`  
+
+2. Open file in a text editor to edit the `XML`
+
+3. Find the `zone` elements  
+
+4. Set the `id` attribute
+
 To set the ids, it helps to use increments of 10. It's easier to keep track of, and if you add an item later, you can add ids in between the elements that already exist.  
 
 Set your first item (top-left) id to 10, then the next id to 20, etc. until you have put all of the items in order.  
@@ -172,7 +181,7 @@ knitr::include_graphics("img/tableau-xml.png")
 
 ???
 
-Now the tab order is correct, and a screen reader will read through the dashboard in order
+This is an example of the XML file, note the zones, id, and name
 
 ---
 
@@ -183,6 +192,10 @@ Now the tab order is correct, and a screen reader will read through the dashboar
 knitr::include_graphics("img/dashboard-title.png")
 ```
 ]
+
+???
+
+Now the tab order is correct, and a screen reader will read through the dashboard in order
 
 ---
 
@@ -230,6 +243,11 @@ knitr::include_graphics("img/dashboard-past-10.png")
 
 - Include descriptive titles, subtitles, and captions  
 
+???
+
+Include descriptive titles, subtitles, and captions
+
+
 --
 
 - Use tools that have good screen reader compatability 
@@ -242,14 +260,32 @@ Not Tableau
 
 - Use alt text to describe images
 
+???
+
+Use alt text to describe images
+
 --
 
 - Encode data with sound and visuals
+
+???
+
+Encode data with sound and visuals
 
 --
 
 - Follow [W3C Accessibility Guidelines](https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/)  
   + 2.4.3: Focus Order: "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability."  
+  
+  
+???
+
+Follow W3C Accessibility Guidelines  
+
+Including: 2.4.3: Focus Order
+
+Pay attention to how accessible technologies such as screen readers interpret the visualization
+
 
 ---
 
