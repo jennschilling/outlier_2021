@@ -38,7 +38,7 @@ style_duo_accent(
   header_font_google = google_font("Josefin Sans"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Fira Mono"),
-  inverse_background_color = "#9f5f9c",
+  inverse_background_color = "#FFFFFF",
   inverse_header_color = "#FFFFFF",
   inverse_text_color = "#FFFFFF"
 )
@@ -84,7 +84,8 @@ knitr::include_graphics("img/dashboard-title.png")
 
 ???
 
-The problem 
+The Problem: the order in which the items on the dashboard are viewed or read by a screen reader does not match the logical order (top to bottom, left to right). 
+
 
 ---
 
@@ -128,11 +129,143 @@ knitr::include_graphics("img/dashboard-most-recent.png")
 ```
 ]
 
+???
+
+To fix the issue, we need to edit the focus order or tab order. This is the order in which the elements of a page are tabbed through. This ordering determins the order in which elements of a page are read by a screen reader.
+
+The dashboard is built in Tableau, and in Tableau, the tab or focus order is based on the order in which items are added to the dashboard when designing or building it
 
 ---
 
+# The Solution
+
+1. Save workbook as a `.tbw`  
+
+2. Open file in a text editor to edit the `XML`
+
+3. Find the `zone` elements  
+
+4. Set the `id` attribute 
+
+???
+
+To set the ids, it helps to use increments of 10. It's easier to keep track of, and if you add an item later, you can add ids in between the elements that already exist.  
+
+Set your first item (top-left) id to 10, then the next id to 20, etc. until you have put all of the items in order.  
+
+It helps to have a PDF or print-out of the dashboard available while you do this, and it's even better to label the items by id on the print-out before changing the XML. You can also name items within the Tableau workbook prior to editing the XML, which will add helpful names to the XML file zone tags. 
+
+Container id attributes do not matter, but all items within a dashboard must have a unique id.  
+
+If you have multiple layouts within a Tableau workbook, items that are on both a Desktop layout and Mobile layout (for example) must have the same id values.
 
 
+---
 
+# The Solution
 
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '100%'}
+knitr::include_graphics("img/tableau-xml.png")
+```
+]
+
+???
+
+Now the tab order is correct, and a screen reader will read through the dashboard in order
+
+---
+
+# The Solution
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-title.png")
+```
+]
+
+---
+
+# The Solution
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-date.png")
+```
+]
+
+---
+
+# The Solution
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-filter.png")
+```
+]
+
+---
+
+# The Solution
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-most-recent.png")
+```
+]
+
+---
+
+# The Solution
+
+.center[
+```{r dpi = 300, echo = FALSE, out.width = '50%'}
+knitr::include_graphics("img/dashboard-past-10.png")
+```
+]
+
+---
+
+# Designing Accessible Data Visualizations
+
+- Include descriptive titles, subtitles, and captions  
+
+--
+
+- Use tools that have good screen reader compatability 
+
+???
+
+Not Tableau
+
+--
+
+- Use alt text to describe images
+
+--
+
+- Encode data with sound and visuals
+
+--
+
+- Follow [W3C Accessibility Guidelines](https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/)  
+  + 2.4.3: Focus Order: "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability."  
+
+---
+
+class: inverse, left, middle
+
+background-image: url(img/Blue-Wire.jpg)
+background-size: cover
+
+# Dashboard Accessiblity: Focus Order
+
+.large[Jenn Schilling]
+
+.large[Outlier | February 2021]
+
+.titlelinks[
+<br>`r icon::fontawesome$solid$link` [jennschilling.me](https://jennschilling.me)
+<br>`r icon::fontawesome$brands$twitter` [datasciencejenn](https://twitter.com/datasciencejenn)
+]
 
