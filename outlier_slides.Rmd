@@ -1,5 +1,5 @@
 ---
-title: "Dashboard Accessiblity: Focus Order"
+title: "Dashboard Accessibility: Focus Order"
 subtitle: "Outlier Lightning Talk"
 author: "Jenn Schilling"
 date: "February 2021"
@@ -56,7 +56,7 @@ class: inverse, left, middle
 background-image: url(img/Blue-Wire.jpg)
 background-size: cover
 
-# Dashboard Accessiblity: Focus Order
+# Dashboard Accessibility: Focus Order
 
 .large[Jenn Schilling]
 
@@ -294,7 +294,7 @@ class: inverse, left, middle
 background-image: url(img/Blue-Wire.jpg)
 background-size: cover
 
-# Dashboard Accessiblity: Focus Order
+# Dashboard Accessibility: Focus Order
 
 .large[Jenn Schilling]
 

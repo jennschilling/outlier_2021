@@ -1,0 +1,245 @@
+1
+00:00:00,080 --> 00:00:04,080
+I'm Jenn Schilling, and today I'm going to talk 
+about how to set the focus order on a Tableau  
+
+2
+00:00:04,080 --> 00:00:09,040
+dashboard. When I made the COVID-19 dashboard 
+for the University of Arizona, where I work as  
+
+3
+00:00:09,040 --> 00:00:14,400
+a senior data analyst, the focus order became an 
+issue immediately after the dashboard went live.  
+
+4
+00:00:14,400 --> 00:00:18,320
+I'm going to share why focus order 
+matters, how it can be set within Tableau,  
+
+5
+00:00:18,320 --> 00:00:23,680
+and the implications to data visualization as a 
+whole. Before we get started, let's define focus  
+
+6
+00:00:23,680 --> 00:00:30,240
+order. Focus order is the order in which a user 
+accesses elements of a web page or a dashboard.  
+
+7
+00:00:30,240 --> 00:00:38,160
+And normally we would want a user or viewer of our 
+dashboards to access them in a sequential order  
+
+8
+00:00:38,160 --> 00:00:45,760
+top to bottom, left to right. In Tableau, 
+though, when we add elements to a dashboard  
+
+9
+00:00:45,760 --> 00:00:50,880
+the focus order is automatically set for us, and 
+it's set by the order in which elements are added. 
+
+10
+00:00:50,880 --> 00:00:56,080
+So, as we're building the dashboard each time we 
+add a new sheet or a new element to the dashboard  
+
+11
+00:00:56,640 --> 00:01:02,560
+that element gets an ID and that ID determines 
+the focus order. Normally as we're building  
+
+12
+00:01:02,560 --> 00:01:06,800
+and designing dashboards we're not necessarily 
+thinking about the top to bottom, left to right  
+
+13
+00:01:07,600 --> 00:01:13,760
+sequence or final order of the layout of the 
+dashboard, so this becomes an issue when those  
+
+14
+00:01:13,760 --> 00:01:18,640
+IDs are automatically set for us. And i'm going 
+to show you an example here where the red arrow  
+
+15
+00:01:18,640 --> 00:01:24,240
+is going to show the focus order and reading 
+through this screenshot of part of the dashboard.  
+
+16
+00:01:24,240 --> 00:01:30,640
+So it starts with the title but then it goes down 
+to the past 10 days and then it goes back up to  
+
+17
+00:01:30,640 --> 00:01:36,720
+the date when data was last pulled, it goes down 
+to the graph and back up to the most recent day. 
+
+18
+00:01:36,720 --> 00:01:43,200
+So as you saw that's not the logical top to 
+bottom, left to right order, but we can fix this.
+
+19
+00:01:45,360 --> 00:01:53,040
+Underneath a Tableau workbook is an XML file, and 
+so if the workbook is saved as a .tbw you can open  
+
+20
+00:01:53,040 --> 00:02:00,560
+that file in a text editor and edit the XML. Each 
+element on a dashboard is contained within a zone  
+
+21
+00:02:00,560 --> 00:02:06,720
+element in the XML, and each of these zone elements 
+has an ID attribute. By setting the ID attributes,  
+
+22
+00:02:06,720 --> 00:02:13,200
+we set the focus order. So what we can do is go 
+back through our dashboard, and in each element  
+
+23
+00:02:13,200 --> 00:02:19,600
+we can set the focus order to be a logical number 
+or order from that top to bottom, left to right  
+
+24
+00:02:19,600 --> 00:02:25,120
+that we want the user to access our dashboard 
+and read our dashboard. Some tips with this are  
+
+25
+00:02:25,120 --> 00:02:30,400
+to print out your dashboard before you get started 
+and label all the pieces and the number that you  
+
+26
+00:02:30,400 --> 00:02:35,840
+want for the attributes. It's also a good idea 
+to set the ID attributes in increments of 10  
+
+27
+00:02:36,400 --> 00:02:41,120
+because then when you go back and add something 
+else to the dashboard it's easier to add  
+
+28
+00:02:41,120 --> 00:02:48,880
+a ID element for that new at that new piece 
+that you added in between two numbers that  
+
+29
+00:02:48,880 --> 00:02:53,040
+have a range of 10 rather than having to 
+renumber all of your IDs to fit that piece in.  
+
+30
+00:02:54,160 --> 00:02:59,440
+It's also helpful you can before you edit it in 
+the text editor you can set names for different  
+
+31
+00:02:59,440 --> 00:03:04,240
+parts of your dashboard and that will make 
+it easier to figure out what should get what ID.  
+
+32
+00:03:04,240 --> 00:03:09,040
+So this is an example of what it looks like 
+in the XML, and you'll notice I have some names  
+
+33
+00:03:09,040 --> 00:03:17,360
+here, and I have my ID elements identified and 
+renumbered. And you can see the different zone  
+
+34
+00:03:17,360 --> 00:03:23,920
+attributes that you get when you edit that XML 
+file. So once our focus order is set correctly  
+
+35
+00:03:24,560 --> 00:03:31,600
+we can go through, and we've got the title then 
+we've got the date we've got our filters, most  
+
+36
+00:03:31,600 --> 00:03:38,080
+recent day, past 10 days, and so on. And everything's 
+happening in a logical order, in the correct order,  
+
+37
+00:03:38,080 --> 00:03:43,760
+and now when a user accesses this and is accessing 
+it by tabbing they're going to get the right order  
+
+38
+00:03:43,760 --> 00:03:48,400
+and the top to bottom, left to right design 
+that we want as they access the dashboard.
+
+39
+00:03:49,280 --> 00:03:54,640
+Some other considerations for designing accessible 
+data visualizations. It's important to include  
+
+40
+00:03:54,640 --> 00:03:59,520
+descriptive titles, subtitles, and captions, and this 
+is also important from a data literacy standpoint  
+
+41
+00:03:59,520 --> 00:04:03,360
+and making sure that our dashboards and data 
+visualizations are understandable and clear  
+
+42
+00:04:03,360 --> 00:04:09,920
+to all users. Also thinking about using tools 
+that have good screen reader compatibility  
+
+43
+00:04:09,920 --> 00:04:15,440
+and good compatibility with other accessibility 
+web accessibility tools. Making sure we use alt  
+
+44
+00:04:15,440 --> 00:04:21,680
+text to describe images and logos and 
+static pieces of a data visualization. Encoding  
+
+45
+00:04:21,680 --> 00:04:28,160
+data with sound as well as visuals. And making 
+sure following the W3C accessibility guidelines  
+
+46
+00:04:28,160 --> 00:04:33,760
+for the web which makes sure that the web and all 
+the parts of the web are accessible for all users.  
+
+47
+00:04:34,560 --> 00:04:42,640
+And here I've just quoted the focus order 
+guideline 2.4.3 which makes sure that the web  
+
+48
+00:04:42,640 --> 00:04:50,000
+can be navigated sequentially by all users. I hope 
+you found this talk useful. If you'd like to get  
+
+49
+00:04:50,000 --> 00:04:54,720
+in touch with me, my website and twitter handle are 
+here. I hope you enjoy the rest of the conference.
+
