@@ -139,7 +139,7 @@ The dashboard is built in Tableau, and in Tableau, the tab or focus order is bas
 
 # The Solution
 
-1. Save workbook as a `.tbw`  
+1. Save workbook as a `.twb`  
 
 2. Open file in a text editor to edit the `XML`
 
@@ -150,7 +150,7 @@ The dashboard is built in Tableau, and in Tableau, the tab or focus order is bas
 ???
 
 
-1. Save workbook as a `.tbw`  
+1. Save workbook as a `.twb`  
 
 2. Open file in a text editor to edit the `XML`
 
