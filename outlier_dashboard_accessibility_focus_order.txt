@@ -1,0 +1,30 @@
+
+I'm Jenn Schilling, and today I'm going to talk about how to set the focus order on a Tableau dashboard. 
+
+When I made the COVID-19 dashboard for the University of Arizona, where I work as a senior data analyst, the focus order became an issue immediately after the dashboard went live.
+
+I'm going to share why focus order matters, how it can be set within Tableau, and the implications to data visualization as a whole. 
+
+Before we get started, let's define focus order. Focus order is the order in which a user accesses elements of a web page or a dashboard. And normally we would want a user or viewer of our dashboards to access them in a sequential order top to bottom, left to right. In Tableau, though, when we add elements to a dashboard the focus order is automatically set for us, and it's set by the order in which elements are added. So, as we're building the dashboard each time we add a new sheet or a new element to the dashboard that element gets an ID and that ID determines the focus order. 
+
+Normally as we're building dashboards we're not necessarily thinking about the top to bottom, left to right sequence or final order of the layout of the dashboard, so this becomes an issue when those IDs are automatically set for us. And I'm going to show you an example here where the red arrow is going to show the focus order reading through this screenshot of part of the dashboard.
+
+So it starts with the title but then it goes down to the past 10 days and then it goes back up to the date when data was last pulled, it goes down to the graph and back up to the most recent day. As you saw that's not the logical top to bottom, left to right order, but we can fix this.
+
+Underneath a Tableau workbook is an XML file, and so if the workbook is saved as a .twb you can open that file in a text editor and edit the XML. Each element on a dashboard is contained within a zone element in the XML, and each of these zone elements has an ID attribute. By setting the ID attributes, we set the focus order. So what we can do is go back through our dashboard, and in each element we can set the focus order to be a logical number or order from that top to bottom, left to right that we want the user to access our dashboard and read our dashboard. 
+
+One tip with this is to print out your dashboard before you get started and label all the pieces and the number that you want for the attributes. It's also a good idea to set the ID attributes in increments of 10 because then when you go back and add something else to the dashboard it's easier to add an ID element for the new piece that you added in between two numbers that have a range of 10 rather than having to renumber all of your IDs to fit that piece in.
+
+It's also helpful to set names for different parts of the dashboard in Tableau before you edit the XML in a text editor. This makes it easier to figure out what should get what ID.
+
+This is an example of what it looks like in the XML, and you'll notice I have some names here, and I have my ID elements identified and renumbered. And you can see the different zone attributes that you get when you edit that XML file.
+
+Once our focus order is set correctly, we can go through and check the focus order. Now we've got the title, then we've got the date we've got our filters, most recent day, past 10 days, and so on. And everything's happening in a logical order, in the correct order, and now when a user accesses this and is accessing it by tabbing they're going to get the right order, and the top to bottom, left to right design that we want as they access the dashboard.
+
+
+Here are some other considerations for designing accessible data visualizations. It's important to include descriptive titles, subtitles, and captions, and this is also important from a data literacy standpoint, and making sure that our dashboards and data visualizations are understandable and clear to all users. Also, think about using tools that have good screen reader compatibility and good compatibility with web accessibility tools. Make sure to use alt text to describe images and logos and static pieces of a data visualization. Encoding data with sound as well as visuals is another way to think about designing more accessible data representations. And make sure following the W3C accessibility guidelines for the web, which makes sure that the web and all the parts of the web are accessible for all users.
+
+And here I've just quoted the focus order guideline 2.4.3 which makes sure that the web can be navigated sequentially by all users.
+
+I hope you found this talk useful. If you'd like to get in touch with me, my website and twitter handle are here. I hope you enjoy the rest of the conference. Thank you for your time and attention.
+
