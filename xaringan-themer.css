@@ -15,11 +15,11 @@
  *    - xaringan wiki: https://github.com/yihui/xaringan/wiki
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
- *  Version: 0.3.0
+ *  Version: 0.3.3
  *
  * ------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:300,300i&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Fira+Mono&display=swap);
 
 
@@ -29,8 +29,9 @@
   --text-font-is-google: 1;
   --text-font-family-fallback: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial;
   --text-font-base: sans-serif;
-  --header-font-family: 'Josefin Sans';
+  --header-font-family: Montserrat;
   --header-font-is-google: 1;
+  --header-font-family-fallback: Georgia, serif;
   --code-font-family: 'Fira Mono';
   --code-font-is-google: 1;
   --base-font-size: 20px;
@@ -43,20 +44,21 @@
 
   /* Colors */
   --text-color: #000000;
-  --header-color: #30b4a7;
+  --header-color: #46596b;
   --background-color: #FFFFFF;
-  --link-color: #30b4a7;
-  --text-bold-color: #30b4a7;
+  --link-color: #46596b;
+  --text-bold-color: #46596b;
   --code-highlight-color: rgba(255,255,0,0.5);
   --inverse-text-color: #FFFFFF;
   --inverse-background-color: #FFFFFF;
   --inverse-header-color: #FFFFFF;
-  --title-slide-background-color: #30b4a7;
-  --title-slide-text-color: #000000;
-  --header-background-color: #30b4a7;
+  --inverse-link-color: #46596b;
+  --title-slide-background-color: #46596b;
+  --title-slide-text-color: #FFFFFF;
+  --header-background-color: #46596b;
   --header-background-text-color: #FFFFFF;
-  --primary: #30b4a7;
-  --secondary: #9f5f9c;
+  --primary: #46596b;
+  --secondary: #FFFFFF;
   --white: #FFFFFF;
   --black: #000000;
 }
@@ -71,7 +73,7 @@ body {
   color: var(--text-color);
 }
 h1, h2, h3 {
-  font-family: var(--header-font-family);
+  font-family: var(--header-font-family), var(--header-font-family-fallback);
   font-weight: 600;
   color: var(--header-color);
 }
@@ -99,10 +101,10 @@ h1, h2, h3 {
 }
 .remark-inline-code {
   font-size: var(--code-inline-font-size);
-  color: #30b4a7;
+  color: #46596b;
 }
 .remark-slide-number {
-  color: #30b4a7;
+  color: #46596b;
   opacity: 1;
   font-size: 0.9em;
 }
@@ -128,6 +130,9 @@ a, a > code {
 .inverse h1, .inverse h2, .inverse h3 {
   color: var(--inverse-header-color);
 }
+.inverse a, .inverse a > code {
+  color: var(--inverse-link-color);
+}
 .title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
   color: var(--title-slide-text-color);
 }
@@ -144,10 +149,10 @@ a, a > code {
   float: left;
 }
 .left-column h2, .left-column h3 {
-  color: #30b4a799;
+  color: #46596b99;
 }
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #30b4a7;
+  color: #46596b;
 }
 .right-column {
   width: 75%;
@@ -162,14 +167,14 @@ a, a > code {
   float: right;
   width: 47%;
 }
-.pull-right ~ * {
+.pull-right + * {
   clear: both;
 }
 img, video, iframe {
   max-width: 100%;
 }
 blockquote {
-  border-left: solid 5px #9f5f9c80;
+  border-left: solid 5px #FFFFFF80;
   padding-left: 1em;
 }
 .remark-slide table {
@@ -184,7 +189,7 @@ th, td {
   padding: 5px;
 }
 .remark-slide thead, .remark-slide tfoot, .remark-slide tr:nth-child(even) {
-  background: #EBDFEB;
+  background: #FFFFFF;
 }
 table.dataTable tbody {
   background-color: var(--background-color);
@@ -194,7 +199,7 @@ table.dataTable.display tbody tr.odd {
   background-color: var(--background-color);
 }
 table.dataTable.display tbody tr.even {
-  background-color: #EBDFEB;
+  background-color: #FFFFFF;
 }
 table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.5);
