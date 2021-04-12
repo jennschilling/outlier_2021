@@ -32,9 +32,9 @@ library(icons)
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 
 style_duo_accent(
-  primary_color = "#46596b",
+  primary_color = "#0C234B",
   secondary_color = "#FFFFFF",
-  link_color = choose_dark_or_light("#FFFFFF", "#46596b"),
+  link_color = choose_dark_or_light("#FFFFFF", "#FFFFFF"),
   header_font_google = google_font("Montserrat"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Fira Mono"),
@@ -58,7 +58,7 @@ background-size: cover
 
 .large[Jenn Schilling]
 
-.large[Senior Data Analyst, University of Arizona]
+.large[Senior Data Analyst | University of Arizona]
 
 .large[AAUDE Annual Meeting | April 2021]
 
@@ -235,7 +235,7 @@ knitr::include_graphics("img/dashboard-past-10.png")
 
 ---
 
-## Designing Accessible Data Visualizations
+# Accessible Data Visualizations
 
 - Include descriptive titles, subtitles, and captions  
 
@@ -246,11 +246,11 @@ Include descriptive titles, subtitles, and captions
 
 --
 
-- Use tools that have good screen reader compatability 
+- Use tools that have good screen reader compatibility 
 
 ???
 
-Not Tableau
+Tableau is not the best 
 
 --
 
@@ -294,7 +294,7 @@ background-size: cover
 
 .large[Jenn Schilling]
 
-.large[Senior Data Analyst, University of Arizona]
+.large[Senior Data Analyst | University of Arizona]
 
 .large[AAUDE Annual Meeting | April 2021]
 
