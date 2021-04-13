@@ -170,7 +170,7 @@ If you have multiple layouts within a Tableau workbook, items that are on both a
 # The Solution
 
 .center[
-```{r dpi = 300, echo = FALSE, out.width = '100%'}
+```{r dpi = 300, echo = FALSE, out.width = '90%'}
 knitr::include_graphics("img/tableau-xml.png")
 ```
 ]
