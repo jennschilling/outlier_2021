@@ -34,7 +34,7 @@ library(icons)
 style_duo_accent(
   primary_color = "#0C234B",
   secondary_color = "#FFFFFF",
-  link_color = choose_dark_or_light("#FFFFFF", "#FFFFFF"),
+  link_color = choose_dark_or_light("#0C234B", "#0C234B"),
   header_font_google = google_font("Montserrat"),
   text_font_google   = google_font("Montserrat", "300", "300i"),
   code_font_google   = google_font("Fira Mono"),
@@ -270,7 +270,7 @@ Encode data with sound and visuals
 
 --
 
-- Follow [W3C Accessibility Guidelines](https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/)  
+- Follow <b><a href="https://www.w3.org/TR/2021/WD-wcag-3.0-20210121/" style="color:#0C234B">W3C Accessibility Guidelines</a></b> 
   + 2.4.3: Focus Order: "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability."  
   
   
